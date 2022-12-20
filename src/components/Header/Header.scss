@@ -1,0 +1,85 @@
+@import "../../sass/base"; 
+
+
+.header {
+  grid-column: full-start / col-end 6;
+  padding: 8rem;
+  padding-top: 4rem;
+  
+  background-image: 
+    linear-gradient(
+      rgba($color-secondary, 0.95), 
+      rgba($color-secondary, 0.95)
+    ), 
+    url('../../assets/images/hero.jpeg')
+  ;
+  
+  background-position: center;
+  background-size: cover;
+  
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  row-gap: 4rem;
+  justify-content: center;
+  
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+  }
+  
+  
+  button {
+    align-self: start;
+    justify-self: start;
+  }
+  
+  &__asSeenOn-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    column-gap: 1.5rem;
+    justify-content: center;    
+
+    
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+    
+    &::before, 
+    &::after {
+      content: '';
+      height: 1px;
+      display: block;
+      background-color: currentColor;
+      
+    }
+    
+    &::before {
+      grid-column: 1 / 2;
+    }
+    
+    &::after {
+      grid-column: 3 / 4;
+    }
+  }
+  
+  &__seenOn-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+
+    img {
+      max-height: 2.5rem;
+      max-width: 100%;
+      filter: brightness(70%);
+    }
+  }
+  
+  @media only screen and (max-width: $bp-m) {
+    grid-column: 1 / -1;
+  }
+  
+  
+}

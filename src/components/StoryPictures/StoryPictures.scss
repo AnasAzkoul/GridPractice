@@ -1,0 +1,45 @@
+@import "../../sass/base"; 
+
+
+.story__pictures {
+  background-image: 
+    linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)),
+    url('../../assets/images/back.jpg');
+  grid-column: full-start / col-end 4;
+  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  
+  @media only screen and (max-width: $bp-m) {
+    grid-row: 6 / 7;
+    grid-column: 1 / -1;  
+    padding: calc(100vw / 12);
+  }
+  
+  .story__img--1 {
+    width: 100%;
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+    
+    @media only screen and (max-width: $bp-m) {
+      grid-column: 1 / 5;
+      grid-row: 1 / -1;
+    }
+  }
+  .story__img--2 {
+    width: 115%;
+    grid-column: 4 / 7;
+    grid-row: 4 / 7;
+    z-index: 10;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+    
+    @media only screen and (max-width: $bp-m) {
+      width: 100%;
+      grid-column: 4 / -1;
+      grid-row: 1 / -1;
+    }
+  }
+}

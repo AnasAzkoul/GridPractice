@@ -1,0 +1,54 @@
+@import "../../sass/base"; 
+
+.sidebar {
+  background-color: $color-primary-dark;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+  
+  text-align: center;
+  
+  @media only screen and (max-width: $bp-l) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+.nav-btn {
+  border-radius: 0;   
+  border: none;
+  
+  background-color: #fff;
+  margin-top: 4rem;
+  height: 2px;
+  width: 5rem;
+  position: relative;
+  
+  
+  &::after, 
+  &::before {
+    content: '';
+    background-color: #fff;
+    height: 2px;
+    width: 5rem;
+    position: absolute;
+    left: 0;
+    // top: 0;
+  }
+  
+  &::before {
+    bottom: -1.5rem;
+  }
+  
+  &::after {
+    top: -1.5rem;
+  }
+  
+  @media only screen and (max-width: $bp-l) {
+    margin-bottom: 4rem;
+    margin-right: 5rem;
+  }
+}

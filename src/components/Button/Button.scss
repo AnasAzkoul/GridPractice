@@ -1,0 +1,24 @@
+@import "../../sass/base"; 
+
+.btn {
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  font-family: $font-display;
+  transition: all 0.2s;
+  cursor: pointer;
+  
+  &-primary {
+    background-color: $color-primary;
+  }
+  
+  &-primary:hover {
+    background-color: $color-primary-dark;
+  }
+  
+  &-secondary {
+  
+  }
+}

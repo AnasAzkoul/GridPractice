@@ -1,0 +1,10 @@
+@import "../../sass/base"; 
+
+.homes {
+  margin: 10rem 0;
+  grid-column: center-start / center-end;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
+}

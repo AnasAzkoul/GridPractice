@@ -1,0 +1,23 @@
+@import "../../sass/base"; 
+
+.story__content {
+  background-color: $color-grey-light-1;
+  grid-column: col-start 5 / full-end;
+  
+  padding: 6rem 8vw;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+  @media only screen and (max-width: $bp-m) {
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;  
+  }
+}
+
+.story__text {
+  font-size: 1.5rem;
+  font-style: italic;
+}

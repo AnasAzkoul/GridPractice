@@ -1,0 +1,61 @@
+@import "../../sass/base"; 
+
+.realtors {
+  background-color: $color-secondary;
+  grid-column: col-start 7 / full-end;
+  padding: 10rem 15rem;
+  display: grid;
+  grid-template-columns: max-content;
+  justify-content: center;
+  justify-items: center;
+  
+  @media only screen and (max-width: $bp-m) {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(2, min-content);
+    column-gap: 5rem;
+    row-gap: 4rem;
+  }
+  
+  @media only screen and (max-width: $bp-s) {
+    grid-template-columns: max-content;
+    grid-template-rows: repeat(2, min-content);
+    column-gap: 5rem;
+    row-gap: 4rem;
+  }
+  
+  h2 {
+    align-self: center;
+    
+    @media only screen and (max-width: $bp-m) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+  }
+  
+  .realtor {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  
+    &__img {
+      height: 7rem;
+      width: 7rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    &__name {
+      color: $color-grey-light-1;
+      font-size: 1.8rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+    
+    &__sales {
+      color: $color-grey-light-2;
+      font-size: 1.3rem;
+    }
+  }
+}

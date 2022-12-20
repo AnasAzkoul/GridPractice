@@ -1,0 +1,30 @@
+@import "../../sass/base"; 
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 2.5rem;
+  column-gap: 1.5rem;
+  
+  &__icon {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+    
+    font-size: 4.5rem;
+    color: $color-primary; 
+  }
+  
+  h4 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  &__text {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    
+    font-size: 1.6rem;
+  }
+}
